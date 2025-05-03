@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text update by adding onclick</title>
+</head>
+<body>
+   
+    <!-- option--- 1  Text update by adding onclick -->
+<h1 id="text">Hello Everyone How is going Stydy ?</h1>
+<button onclick="change()">update</button>
+
+<!-- option -2: Text update by adding addEventListener -->
+<h1 id="talk">Everybody HOW are You ?</h1>
+<button id="btn">add</button>
+
+<script>
+    const  change=()=>{
+const textUpdate=document.getElementById('text')
+textUpdate.innerText= 'We are learning DOM'
+    }
+
+    // option -2: Text update by adding addEventListener -->
+    const topic=()=>{
+        const word=document.getElementById('talk');
+      word.textContent='fine';
+    }
+      document.getElementById('btn').addEventListener('click',topic)
+</script>
+
+
+
+
+
+
+
+
+    
+ 
+</body>
+</html>

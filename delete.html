@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm anything Delete by typing' Delete' Word
+    </title>
+</head>
+<body>
+<h1 id="header">Delete Me !</h1>
+<input id="inputtext" placeholder="Type delete" type="text">
+<button disabled id="btn">Delete</button>
+<script>
+document.getElementById('btn').addEventListener('click',()=>{
+const display=document.getElementById('header');
+display.style.display= 'none';
+})
+// step---2
+document.getElementById('inputtext').addEventListener('keyup',()=>{
+    const inputfield=document.getElementById('inputtext');
+    const deletebtn=document.getElementById('btn');
+    if(inputfield.value==='delete'){
+        deletebtn.disabled=false;
+    }else{
+        deletebtn.disabled=true;
+    }
+})
+</script>
+</body>
+</html
